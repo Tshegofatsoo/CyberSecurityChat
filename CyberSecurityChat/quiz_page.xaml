@@ -1,0 +1,56 @@
+﻿<Page x:Class="CyberSecurityApp.Pages.QuizPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:CyberSecurityApp.Pages"
+      Title="QuizPage">
+
+    <Grid Background="PeachPuff">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="600">
+
+            <TextBlock Text="Cyber Security Quiz"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="Plum"
+                       HorizontalAlignment="Center"
+                       Margin="0,10"/>
+
+            <TextBlock x:Name="DisplayedQuestion"
+                       Text="Question goes here"
+                       FontSize="16"
+                       TextWrapping="Wrap"
+                       Margin="0,0,0,10"
+                       HorizontalAlignment="Center"/>
+
+            <Button x:Name="FirstChoiceButton"
+                    Click="HandleAnswerSelection"
+                    Padding="10"
+                    Margin="0,5"/>
+            <Button x:Name="SecondChoiceButton"
+                    Click="HandleAnswerSelection"
+                    Padding="10"
+                    Margin="0,5"/>
+            <Button x:Name="ThirdChoiceButton"
+                    Click="HandleAnswerSelection"
+                    Padding="10"
+                    Margin="0,5"/>
+            <Button x:Name="FourthChoiceButton"
+                    Click="HandleAnswerSelection"
+                    Padding="10"
+                    Margin="0,5"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                <Button x:Name="NextQuestionButton"
+                        Content="Next"
+                        Click="HandleNextQuestion"
+                        Background="Pink"
+                        Padding="10"
+                        Margin="0,0,10,0"/>
+                <TextBlock x:Name="DisplayScore"
+                           Text="Score: 0"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Foreground="Green"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
